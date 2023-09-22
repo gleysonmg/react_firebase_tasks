@@ -5,7 +5,7 @@ import database from "../../src/config/firebaseconfig";
 import styles from "./style";
 
 
-export default function NewTask() {
+export default function NewTask({ navigation }) {
 
     const [description, setDescription] = useState(null);
 
@@ -15,7 +15,7 @@ export default function NewTask() {
             status: false
         })
 
-        //navigation.navigate("Task");
+        navigation.navigate("Tasks");
     }
     return (
         <View style={styles.container}>

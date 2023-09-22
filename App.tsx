@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Task from './pages/Task';
+import Tasks from './pages/Tasks';
 import NewTask from './pages/NewTask';
 import Details from './pages/Details';
 
@@ -13,14 +13,14 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Task'>
         <Stack.Screen
-          name="Task"
-          component={Task}
+          name="Tasks"
+          component={Tasks}
           options={{
             headerTintColor: "#F92E6A"
           }}
         />
         <Stack.Screen
-          name="NewTask"
+          name="New Task"
           component={NewTask}
           options={{
             headerTintColor: "#F92E6A"

@@ -10,7 +10,7 @@ import database from "../../src/config/firebaseconfig";
 import styles from "./style";
 import { FontAwesome } from "@expo/vector-icons";
 
-export default function Task({ navigation }) {
+export default function Tasks({ navigation }) {
 
     const [task, setTask] = useState([]);
 
@@ -49,7 +49,7 @@ export default function Task({ navigation }) {
                                 </FontAwesome>
                             </TouchableOpacity>
                             <Text
-                                style={styles.DescriptionTask}
+                                style={styles.descriptionTask}
                                 onPress={() => {
                                     navigation.navigate("Details", {
                                         id: item.id,
@@ -65,7 +65,7 @@ export default function Task({ navigation }) {
             />
             <TouchableOpacity
                 style={styles.buttonNewTask}
-                onPress={() => navigation.navigate("NewTask")}
+                onPress={() => navigation.navigate("New Task")}
             >
                 <Text style={styles.textButton}>New Task</Text>
             </TouchableOpacity>
